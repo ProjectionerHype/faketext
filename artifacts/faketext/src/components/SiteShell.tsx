@@ -119,7 +119,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           </div>
         </div>
         <div className="border-t border-border py-4 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} faketext.fun · Made for creators, pranksters, and storytellers.
+          © {new Date().getFullYear()} faketext.fun
         </div>
       </footer>
     </div>
