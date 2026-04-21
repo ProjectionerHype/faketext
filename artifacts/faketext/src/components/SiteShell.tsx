@@ -54,7 +54,6 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             >
               {dark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </button>
-            <Button onClick={() => navigate("/chat")} className="ml-2 rounded-lg font-semibold">Make a fake chat</Button>
           </nav>
           <div className="md:hidden flex items-center gap-1">
             <button onClick={() => setDark(!dark)} className="w-9 h-9 rounded-lg hover:bg-muted flex items-center justify-center">
