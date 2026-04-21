@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "FakeText.fun"
+version = "1.0.0"
+id = "artifacts/faketext"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25692
+
+[services.development]
+run = "pnpm --filter @workspace/faketext run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/faketext", "run", "build" ]
+publicDir = "artifacts/faketext/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25692"
+BASE_PATH = "/"

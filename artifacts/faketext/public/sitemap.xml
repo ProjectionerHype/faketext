@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://faketext.fun/</loc><priority>1.0</priority></url>
+  <url><loc>https://faketext.fun/chat</loc><priority>0.9</priority></url>
+  <url><loc>https://faketext.fun/chat/whatsapp</loc><priority>0.9</priority></url>
+  <url><loc>https://faketext.fun/chat/imessage</loc><priority>0.9</priority></url>
+  <url><loc>https://faketext.fun/chat/instagram</loc><priority>0.8</priority></url>
+  <url><loc>https://faketext.fun/chat/messenger</loc><priority>0.8</priority></url>
+  <url><loc>https://faketext.fun/chat/telegram</loc><priority>0.8</priority></url>
+  <url><loc>https://faketext.fun/chat/discord</loc><priority>0.7</priority></url>
+  <url><loc>https://faketext.fun/comments</loc><priority>0.9</priority></url>
+  <url><loc>https://faketext.fun/comments/youtube</loc><priority>0.9</priority></url>
+  <url><loc>https://faketext.fun/comments/instagram</loc><priority>0.8</priority></url>
+  <url><loc>https://faketext.fun/comments/twitter</loc><priority>0.8</priority></url>
+  <url><loc>https://faketext.fun/comments/tiktok</loc><priority>0.8</priority></url>
+  <url><loc>https://faketext.fun/comments/facebook</loc><priority>0.7</priority></url>
+  <url><loc>https://faketext.fun/about</loc><priority>0.5</priority></url>
+  <url><loc>https://faketext.fun/privacy</loc><priority>0.4</priority></url>
+</urlset>

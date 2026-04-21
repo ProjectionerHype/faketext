@@ -1,27 +1,29 @@
-# Workspace
+# FakeText.fun
 
-## Overview
-
-pnpm workspace monorepo using TypeScript. Each package manages its own dependencies.
+A free fake chat & comment screenshot generator targeting the domain `faketext.fun`. Built as a heavily SEO-optimized React + Vite single-page app.
 
 ## Stack
+- pnpm monorepo (workspace) — main artifact at `artifacts/faketext` (web, previewPath `/`).
+- React + Vite + TypeScript + Tailwind v4, wouter routing, framer-motion, react-icons, lucide-react.
+- `html-to-image` for PNG download / clipboard copy.
 
-- **Monorepo tool**: pnpm workspaces
-- **Node.js version**: 24
-- **Package manager**: pnpm
-- **TypeScript version**: 5.9
-- **API framework**: Express 5
-- **Database**: PostgreSQL + Drizzle ORM
-- **Validation**: Zod (`zod/v4`), `drizzle-zod`
-- **API codegen**: Orval (from OpenAPI spec)
-- **Build**: esbuild (CJS bundle)
+## Structure
+- `src/App.tsx` — wouter router with `BASE_URL` base.
+- `src/index.css` — purple→magenta theme, full light/dark CSS variables.
+- `src/components/SiteShell.tsx` — header/footer/dark-mode toggle.
+- `src/components/GeneratorLayout.tsx` — shared layout with download/copy PNG.
+- `src/components/MessageEditor.tsx` — chat message + contact panel + Avatar/StatusBar primitives.
+- `src/components/CommentEditor.tsx` — post panel + comments editor + verified badge.
+- `src/pages/Landing.tsx` — SEO-rich landing (hero, app grids, how-it-works, use-cases, FAQ, JSON-LD).
+- `src/pages/chats/*` — WhatsApp, iMessage, Instagram, Messenger, Telegram, Discord simulators.
+- `src/pages/comments/*` — YouTube, Instagram, Twitter/X, TikTok, Facebook generators.
+- `public/robots.txt`, `public/sitemap.xml`, `public/favicon.svg`.
 
-## Key Commands
+## SEO
+- Each page sets title/description/canonical via `useSeo`.
+- Sitemap & robots reference `https://faketext.fun`.
+- JSON-LD WebApplication schema injected on landing.
+- Footer disclaimer: "For entertainment & educational use only".
 
-- `pnpm run typecheck` — full typecheck across all packages
-- `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- `pnpm --filter @workspace/api-server run dev` — run API server locally
-
-See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details.
+## Disabled artifacts
+- `artifacts/api-server` and `artifacts/mockup-sandbox` are present but not used by the live product.
