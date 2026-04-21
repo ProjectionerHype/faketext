@@ -1,7 +1,8 @@
 import { Link, useLocation } from "wouter";
 import { useEffect, useState } from "react";
-import { Moon, Sun, MessageCircle, MessageSquareText, Menu, X, Sparkles } from "lucide-react";
+import { Moon, Sun, MessageCircle, MessageSquareText, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { LogoMark, LogoWordmark } from "@/components/Logo";
 
 function useDark() {
   const [dark, setDark] = useState(() => {
@@ -35,11 +36,9 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <header className="sticky top-0 z-40 backdrop-blur-xl bg-background/80 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-md group-hover:scale-105 transition">
-              <Sparkles className="w-5 h-5 text-white" />
-            </div>
-            <span className="font-display text-xl font-bold tracking-tight">faketext<span className="text-primary">.fun</span></span>
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <LogoMark className="w-9 h-9 group-hover:scale-105 transition-transform drop-shadow-[0_4px_12px_rgba(168,85,247,0.35)]" />
+            <LogoWordmark />
           </Link>
           <nav className="hidden md:flex items-center gap-1">
             {links.map((l) => (
@@ -82,8 +81,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-sm">
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center"><Sparkles className="w-4 h-4 text-white" /></div>
-              <span className="font-display text-lg font-bold">faketext.fun</span>
+              <LogoMark className="w-8 h-8" />
+              <LogoWordmark className="text-lg" />
             </div>
             <p className="text-muted-foreground">The internet's most fun fake chat & comment generator. 100% free, runs in your browser.</p>
           </div>
